@@ -49,7 +49,7 @@ DefaultLimitMEMLOCK=infinity
 
 **重启主机** 或 **执行命令**：`systemctl daemon-reexec`
 
-**修改mmap计数的操作系统限制 并 禁用swap**
+**修改vm.map计数的操作系统限制 并 禁用swap**
 
 ```bash
 $ sudo vim /etc/sysctl.conf
