@@ -1,9 +1,9 @@
 # Docker极简部署Kafka+Zookeeper+ElasticStack
-之前写ELK部分时有朋友问有没有能一键部署的Kafka+ELK，写本文主要是填这个坑，基本上配置已经集中在一两个文件中了，理论上此配置支持ElasticStack 7.x所有版本
+理论上此配置支持ElasticStack 7.x所有版本
 
 
 
-本文所有配置与代码均在本人Github中可以找到：<https://github.com/hellxz/QuickDeployElasticStack>
+本文对应博客园：<https://www.cnblogs.com/hellxz/p/quick-deploy-kafka-elk.html>
 
 ## 测试环境
 
@@ -77,6 +77,7 @@ cd QuickDeployElasticStack
 ```
 .
 ├── docker-compose.yml
+├── .env
 ├── logstash-pipeline
 │   └── logstash.conf
 └── README.md
@@ -200,22 +201,10 @@ docker-compose up -d
 
 - Kibana依赖Es
 
-  分别按依赖关系重启容器即可（被依赖的如果变动需要先重启）不被依赖的直接重启
+
+分别按依赖关系重启容器即可（被依赖的如果变动需要先重启）不被依赖的直接重启
 
 ```shell
 docker restart 容器ID或Name
 ```
 
-
-
-
-
-
-
-**后续**
-
-本文源码直接去Github上看吧，技术含量不高，主要是为了方便大家部署ELK  
-
-最后，如果本文对你有帮助，欢迎推荐、评论，转载请注明出处。
-
-源码地址：<https://github.com/hellxz/QuickDeployElasticStack>
